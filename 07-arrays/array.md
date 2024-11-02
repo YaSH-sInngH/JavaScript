@@ -40,13 +40,27 @@ const myArr = new Array(1,2,3,4,5);
 - `unshift()` - It adds one or more elements to the beginning of an array.
 - `shift()` - It removes the first indexed element in array.
 - `join()` - The join() method returns an array as a string.
-- `slice` - The Array slice() method returns selected elements in an array as a new array. 
+- `slice()` - The Array slice() method returns selected elements in an array as a new array. 
     ```
     arr.slice(begin, end);
     begin index is included.
     end index is not included.
     ```
-- `splice` - Array splice() Method is an inbuilt method in JavaScript that is used to change the contents of an array by removing or replacing existing elements and/or adding new elements.
+- `splice()` - Array splice() Method is an inbuilt method in JavaScript that is used to change the contents of an array by removing or replacing existing elements and/or adding new elements.
     ```
     Array.splice( index, remove_count, item_list )
+    ```
+- `concat()` - The concat() method returns a new array, containing the joined arrays.
+- `flat()` - The flat() method of Array instances creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+
+##### Spread Operator: 
+- The JavaScript spread operator (...)  allows us to quickly copy all or part of an existing array or object into another array or object.
+
+    Example: 
+    ```js
+    const num1 = [1, 2, 3];
+    const num2 = [4, 5, 6];
+    const allNum = [...num1, ...num2];
+    // Output: [1,2,3,4,5,6]
     ```

@@ -103,3 +103,19 @@ console.log(users[0].name,users[1].name,users[2].name,users[3].name);
 console.log(Object.keys(users));
 console.log(Object.values(users));
 console.log(Object.entries(users));
+
+// Object De-structuring
+const voter_info = {
+    name:"Max",
+    voter_id: 12356312,
+    address: '1203-12H-Block NewYork'
+}
+
+// voter_info.voter_id = 1243123, this way of doing all the time is way too much
+// so we are going to destructor here,
+
+// const {voter_id} = voter_info;
+const {voter_id: id} = voter_info;
+
+// console.log(voter_id);
+console.log(id);

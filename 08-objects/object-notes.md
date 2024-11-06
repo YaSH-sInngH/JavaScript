@@ -109,3 +109,24 @@ const merged = { ...obj1, ...obj2, ...obj3 };
 console.log(merged);
 ```
 
+`Destructing Objects`: Object destructuring is a JavaScript syntax that allows you to extract specific properties from an object and assign them to variables in a concise way. This can make your code more readable and reduce redundancy.
+
+```js
+const user = {
+  name: "John",
+  age: 30,
+  location: "New York"
+};
+
+const { name, age } = user;
+
+console.log(name); // "John"
+console.log(age);  // 30
+```
+
+- `Renaming Variables`
+```js
+const { name: userName, age: userAge } = user;
+console.log(userName); // "John"
+console.log(userAge);  // 30
+```

@@ -30,3 +30,10 @@ function newArray(myArr){
 // newArray(arr);
 // We can pass array directly into function as parameters as well.
 newArray([1,3,5,7]);
+
+// Function Expression 
+// function is stored inside a variable
+let addOne = function(num){
+    return num + 1;
+}
+console.log(addOne(4));

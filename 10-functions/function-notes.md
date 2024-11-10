@@ -74,3 +74,16 @@ function cart1(...num1){
 console.log(cart1(200,400,500,600));
 // Ouput: [200,400,500,600]
 ```
+
+`Function Expression`
+- It is similar to a function declaration without the function name.
+- Function expressions can be stored in a variable assignment. 
+```js
+const addOne = function(num){
+    return num + 1;
+}
+console.log(addOne(3))
+// Or
+let result = addOne(4);
+console.log(result);
+```

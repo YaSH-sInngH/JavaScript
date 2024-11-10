@@ -25,7 +25,7 @@ console.log(x);
 > IMPORTANT NOTE: `var` keyword is not preffered now in javascript, because if the variable is declared in another block with the same name, it will cause issues.
 >> The variable in other block with same name is not scoped to that particular block, instead it is scoped globally, and change the value for all javascript code.
 
-- `Implicit global variable declaration / Assignment wothout declaration`: In this we assign values witout declaring, it is a bad practice in javascript, as it will also scoped globally.
+- `Implicit global variable declaration / Assignment without declaration`: In this we assign values witout declaring, it is a bad practice in javascript, as it will also scoped globally.
 ```js
 name = "Max";
 console.log(name);

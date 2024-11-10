@@ -21,3 +21,18 @@ function A(){
 }
 A();
 
+// Hoisting 
+
+// Here, we can access the fucntion returned value before even declariing the function.
+console.log(addOne(4));
+function addOne(num){
+    return num + 1;
+}
+
+// Here, we cannot access the returned value of function.
+// As it is declared in variable and we can't access it before declaring it first.
+console.log(addTwo(4));
+let addTwo = function(num){
+    return num + 2;
+}
+// So, this is called hoisting in javascript.

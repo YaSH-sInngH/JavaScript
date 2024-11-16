@@ -53,3 +53,128 @@ In an arrow function like `userInfo`, `this` behaves differently:
 
 ### Arrow Function
 ---
+
+Arrow functions were introduced in ES6.
+
+Arrow functions allow us to write shorter function syntax:
+
+```js
+const addTwoNumbers = (a, b) => {
+    return a+b;
+};
+```
+
+Arrow Functions Return Value by Default.
+
+It is also known as Implicit return.
+```js
+ const addTwoNumber = (a,b) => (a+b);
+```
+
+##### The handling of `this` is also different in arrow functions compared to regular functions.
+
+##### In short, with arrow functions there are no binding of `this`.
+
+##### In regular functions the `this` keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+
+##### With arrow functions the `this` keyword always represents the object that defined the arrow function.
+
+<b><u>Inside normal function</u></b>
+
+```js
+function info(){
+    let username = 'max';
+    console.log(this);
+    console.log(this.username); // undefined
+}
+info();
+```
+
+``` 
+Output Inside console or terminal is:
+
+ Object [global] {
+  global: [Circular *1],
+  queueMicrotask: [Function: queueMicrotask],
+  clearImmediate: [Function: clearImmediate],
+  setImmediate: [Function: setImmediate] {
+    [Symbol(nodejs.util.promisify.custom)]: [Getter]
+  },
+  structuredClone: [Function: structuredClone],
+  clearInterval: [Function: clearInterval],
+  clearTimeout: [Function: clearTimeout],
+  setInterval: [Function: setInterval],
+  setTimeout: [Function: setTimeout] {
+    [Symbol(nodejs.util.promisify.custom)]: [Getter]
+  },
+  atob: [Function: atob],
+  btoa: [Function: btoa],
+  performance: Performance {
+    nodeTiming: PerformanceNodeTiming {
+      name: 'node',
+      entryType: 'node',
+      startTime: 0,
+      duration: 43.01040000002831,
+      nodeStart: 3.08669999986887,
+      v8Start: 7.540000000037253,
+      bootstrapComplete: 30.16760000027716,
+      environment: 16.181200000457466,
+      loopStart: -1,
+      loopExit: -1,
+      idleTime: 0
+    },
+    timeOrigin: 1731755276081.866
+  },
+  fetch: [AsyncFunction: fetch]
+}
+undefined
+```
+
+<b><u>Inside arrow function</u></b>
+
+```js
+let userInfo = () => {
+    let username = 'max';
+    console.log(this);
+    console.log(this.username);
+}
+userInfo();
+```
+
+```
+Output Inside console or terminal is:
+{}
+undefined
+```
+
+---
+
+#### Immediately Invoked Fucntion Expression
+
+- An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
+- An IIFE is a function in JavaScript that runs as soon as it's called or invoked in the event loop. It's a programming language idiom that uses function scoping to create a lexical scope.
+
+Syntax:
+```js
+(function (){ 
+// Function Logic Here. 
+})();
+```
+
+Normal Function Invoaction
+```js
+// Normal Function Invocation
+function info(){
+    console.log('Information sent successfully');
+}
+info();
+```
+
+IIFE
+```js
+(function dataInfo(){
+    console.log('Data Information sent successfully');
+})();
+```
+
+> NOTE: Immediately Invoked Fucntion Exspression should always be ended or close with a semicolon `;`. As it doesn't know when to end the IIFE once invoked.

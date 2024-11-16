@@ -34,3 +34,17 @@ let userInfo = () => {
     console.log(this.username);
 }
 userInfo();
+
+
+// Implicit Return
+// This type of using arrow function is also knwon as Implicit Return.
+// But we can do it directly as well only by using simple () braces.
+// We dont have to return anything.
+
+const addOne = (num1,num2) => (num1+num2);
+// OR
+const addTwo = (num1,num2) => (num1+num2);
+// Object return in arrow function.
+const addThree = (num1,num2) => ({name:"max"});
+// console.log(addTwo(3,4));
+// console.log(addThree(3,4));
